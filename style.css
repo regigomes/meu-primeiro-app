@@ -1,6 +1,6 @@
 body {
     font-family: 'Inter', sans-serif;
-    background-color: #F8F7F4;
+    background-color: #ece1bf;
     color: #3D352E;
 }
 
@@ -9,7 +9,7 @@ body {
 }
 
 .nav-button.active, .nav-button:hover {
-    background-color: #A47D5F;
+    background-color: #904105;
     color: #FFFFFF;
 }
 
