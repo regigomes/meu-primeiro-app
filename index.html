@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatório Interativo: Cooperativa Montanhão Sustentável</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="antialiased">
+
+    <header class="bg-[#A47D5F] text-white shadow-md p-4">
+        <div class="container mx-auto text-center">
+            <h1 class="text-2xl md:text-3xl font-bold">Cooperativa Montanhão Sustentável</h1>
+            <p class="text-sm md:text-md text-stone-200">Semeando Autonomia, Colhendo Cidadania</p>
+        </div>
+    </header>
+
+    <nav class="sticky top-0 bg-[#F8F7F4]/80 backdrop-blur-sm z-10 shadow-sm">
+        <div class="container mx-auto flex justify-center p-2 space-x-2 md:space-x-4 overflow-x-auto">
+            <a href="#diagnostico" class="nav-button text-xs md:text-sm font-semibold px-3 py-2 rounded-full whitespace-nowrap">Diagnóstico</a>
+            <a href="#projeto" class="nav-button text-xs md:text-sm font-semibold px-3 py-2 rounded-full whitespace-nowrap">O Projeto</a>
+            <a href="#impacto" class="nav-button text-xs md:text-sm font-semibold px-3 py-2 rounded-full whitespace-nowrap">Impacto</a>
+            <a href="#comunidade" class="nav-button text-xs md:text-sm font-semibold px-3 py-2 rounded-full whitespace-nowrap">Comunidade</a>
+            <a href="#futuro" class="nav-button text-xs md:text-sm font-semibold px-3 py-2 rounded-full whitespace-nowrap">Futuro</a>
+        </div>
+    </nav>
+
+    <main class="container mx-auto p-4 md:p-8">
+
+        <section id="diagnostico" class="mb-12 scroll-mt-20">
+            <h2 class="text-3xl font-bold text-center mb-2 text-[#8B4513]">O Diagnóstico</h2>
+            <p class="text-center text-lg text-stone-600 mb-8 max-w-3xl mx-auto">Analisamos a fundo a realidade do Montanhão para entender não apenas os sintomas, mas a causa-raiz dos desafios. O que descobrimos foi um ciclo vicioso que precisava ser quebrado, mas também uma oportunidade única de transformação.</p>
+
+            <div class="bg-white p-6 rounded-2xl shadow-lg">
+                <div class="flex justify-center mb-4 border-b pb-4">
+                    <div class="flex rounded-full bg-stone-200 p-1">
+                        <button id="btn-problema" class="nav-button active text-sm px-4 py-1 rounded-full">O Problema</button>
+                        <button id="btn-solucao" class="nav-button text-sm px-4 py-1 rounded-full">A Solução</button>
+                    </div>
+                </div>
+
+                <div id="content-problema" class="tab-content active">
+                    <h3 class="text-2xl font-bold text-center mb-4 text-red-700">O Ciclo Vicioso</h3>
+                    <div class="cycle-diagram">
+                        <div class="cycle-box border-red-400 bg-red-50 text-red-800">Falta de Renda & Oportunidades</div>
+                        <div class="cycle-arrow text-red-500">→</div>
+                        <div class="cycle-box border-red-400 bg-red-50 text-red-800">Degradação Ambiental</div>
+                    </div>
+                    <div class="grid grid-cols-1 justify-items-center"><div class="cycle-arrow text-red-500 transform rotate-90 my-2">↑↓</div></div>
+                    <div class="cycle-diagram">
+                         <div class="cycle-box border-red-400 bg-red-50 text-red-800">Riscos à Saúde & Baixa Qualidade de Vida</div>
+                         <div class="cycle-arrow text-red-500">←</div>
+                         <div class="cycle-box border-red-400 bg-red-50 text-red-800">Enfraquecimento dos Laços Sociais</div>
+                    </div>
+                    <p class="mt-6 text-center text-stone-600">A precariedade econômica e a degradação ambiental se retroalimentavam...</p>
+                </div>
+
+                <div id="content-solucao" class="tab-content">
+                    <h3 class="text-2xl font-bold text-center mb-4 text-green-700">O Ciclo Virtuoso</h3>
+                     <div class="cycle-diagram">
+                        <div class="cycle-box border-green-400 bg-green-50 text-green-800">Resíduo (Recurso)</div>
+                        <div class="cycle-arrow text-green-500">→</div>
+                        <div class="cycle-box border-green-400 bg-green-50 text-green-800">Cooperativa (Trabalho e Renda)</div>
+                    </div>
+                    <div class="grid grid-cols-1 justify-items-center"><div class="cycle-arrow text-green-500 transform rotate-90 my-2">↑↓</div></div>
+                    <div class="cycle-diagram">
+                         <div class="cycle-box border-green-400 bg-green-50 text-green-800">Comunidade Fortalecida</div>
+                         <div class="cycle-arrow text-green-500">←</div>
+                         <div class="cycle-box border-green-400 bg-green-50 text-green-800">Ambiente Saudável & Alimento</div>
+                    </div>
+                    <p class="mt-6 text-center text-stone-600">A solução foi inverter a lógica do problema...</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="projeto" class="mb-12 scroll-mt-20">
+            <h2 class="text-3xl font-bold text-center mb-2 text-[#8B4513]">O Projeto em Ação</h2>
+            <p class="text-center text-lg text-stone-600 mb-8 max-w-3xl mx-auto">A Cooperativa Montanhão Sustentável foi construída sobre três pilares interligados...</p>
+
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <div class="bg-white p-6 rounded-2xl shadow-lg">
+                    <div class="flex border-b mb-4">
+                        <button class="pillar-tab flex-1 text-center font-bold p-3 border-b-4 border-[#A47D5F]" data-target="pilar-reciclagem">Reciclagem</button>
+                        <button class="pillar-tab flex-1 text-center font-bold p-3 border-b-4 border-transparent text-stone-500" data-target="pilar-horta">Horta</button>
+                        <button class="pillar-tab flex-1 text-center font-bold p-3 border-b-4 border-transparent text-stone-500" data-target="pilar-capacitacao">Capacitação</button>
+                    </div>
+                    <div id="pilar-reciclagem" class="pillar-content active">
+                        <h3 class="text-xl font-bold text-[#A47D5F] mb-2">Pilar 1: Reciclagem e Renda</h3>
+                        <p class="text-stone-600">O coração econômico do projeto...</p>
+                    </div>
+                    <div id="pilar-horta" class="pillar-content">
+                        <h3 class="text-xl font-bold text-green-700 mb-2">Pilar 2: Horta e Compostagem</h3>
+                        <p class="text-stone-600">O lixo orgânico, antes fonte de mau cheiro e doenças...</p>
+                    </div>
+                    <div id="pilar-capacitacao" class="pillar-content">
+                        <h3 class="text-xl font-bold text-sky-700 mb-2">Pilar 3: Capacitação e Autonomia</h3>
+                        <p class="text-stone-600">O programa "Capacita Montanhão" é o pilar que garante a sustentabilidade...</p>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl shadow-lg">
+                    <h3 class="text-2xl font-bold text-center mb-4 text-stone-700">Nossa Jornada</h3>
+                    <ol class="relative border-l border-stone-300">
+                        <li class="mb-10 ml-6">...</li>
+                        <li class="mb-10 ml-6">...</li>
+                        <li class="mb-10 ml-6">...</li>
+                         <li class="ml-6">...</li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+
+        <section id="impacto" class="mb-12 scroll-mt-20">
+            <h2 class="text-3xl font-bold text-center mb-2 text-[#8B4513]">Dashboard de Impacto (1º Ano)</h2>
+            <p class="text-center text-lg text-stone-600 mb-8 max-w-3xl mx-auto">Os números não mentem...</p>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+                <div class="bg-white p-4 rounded-2xl shadow-lg text-center">
+                    <div class="text-4xl font-bold text-[#A47D5F]" data-target="20" id="impact-jobs">0</div>
+                    <p class="text-sm text-stone-600 font-medium">Postos de Trabalho</p>
+                </div>
+                <div class="bg-white p-4 rounded-2xl shadow-lg text-center">
+                    <div class="text-4xl font-bold text-green-600" data-target="5" id="impact-waste">0</div>
+                    <p class="text-sm text-stone-600 font-medium">Ton/mês Recicladas</p>
+                </div>
+                <div class="bg-white p-4 rounded-2xl shadow-lg text-center">
+                    <div class="text-4xl font-bold text-sky-600" data-target="40" id="impact-trained">0</div>
+                    <p class="text-sm text-stone-600 font-medium">Pessoas Capacitadas</p>
+                </div>
+                 <div class="bg-white p-4 rounded-2xl shadow-lg text-center">
+                    <div class="text-4xl font-bold text-amber-600" data-target="200" id="impact-area">0</div>
+                    <p class="text-sm text-stone-600 font-medium">m² de Área Verde</p>
+                </div>
+            </div>
+
+            <div class="bg-white p-6 rounded-2xl shadow-lg">
+                <h3 class="text-2xl font-bold text-center mb-4 text-stone-700">Escala do Alcance Comunitário</h3>
+                 <div class="chart-container">
+                    <canvas id="beneficiariesChart"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <section id="comunidade" class="mb-12 scroll-mt-20">
+             <h2 class="text-3xl font-bold text-center mb-2 text-[#8B4513]">A Voz da Comunidade</h2>
+            <p class="text-center text-lg text-stone-600 mb-8 max-w-3xl mx-auto">Mais importante que os números é o impacto na vida das pessoas...</p>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white p-6 rounded-2xl shadow-lg">...</div>
+                <div class="bg-white p-6 rounded-2xl shadow-lg">...</div>
+            </div>
+        </section>
+
+        <section id="futuro" class="scroll-mt-20">
+            <h2 class="text-3xl font-bold text-center mb-2 text-[#8B4513]">Conclusões e Próximos Passos</h2>
+            <p class="text-center text-lg text-stone-600 mb-8 max-w-3xl mx-auto">A intervenção provou que é possível transformar um ciclo vicioso em um ciclo virtuoso...</p>
+            <div class="bg-white p-8 rounded-2xl shadow-lg text-center">...</div>
+        </section>
+    </main>
+
+    <footer class="bg-stone-800 text-stone-300 mt-12 p-4">
+        <div class="container mx-auto text-center text-sm">
+            <p>Relato de uma Intervenção Extensionista | Setembro de 2025</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
