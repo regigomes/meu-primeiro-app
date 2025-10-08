@@ -1,7 +1,9 @@
 # Cooperativa Montanhão Sustentável - Site
 
 Site institucional da Cooperativa Montanhão Sustentável apresentando o projeto "Semeando Autonomia, Colhendo Cidadania".
-Faz parte do trabalho academico"Atividade de extensão" da Unicid-São Paulo
+___
+
+É parte do trabalho academico"Atividade de extensão" da Unicid-São Paulo
 
 ## 🚀 Deploy
 
